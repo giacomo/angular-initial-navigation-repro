@@ -5,10 +5,11 @@ import { SitesRoutingModule } from './sites-routing.module';
 
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    SitesRoutingModule
-  ]
+    declarations: [],
+    imports: [
+        CommonModule,
+        SitesRoutingModule
+    ]
 })
-export class SitesModule { }
+export class SitesModule {
+}

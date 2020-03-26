@@ -16,7 +16,6 @@ export class LanguageStrategyService {
             filter(url => url instanceof RoutesRecognized)
         ).subscribe((route: RoutesRecognized) => {
             if (route.urlAfterRedirects === '/') {
-                console.log('==========> redirect to new route');
                 return router.navigate(['/en']);
             }
         });

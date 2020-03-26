@@ -1,13 +1,16 @@
 <header>
-  <h1 i18n="@@introductionHeader">Hello i18n!</h1>
+    <h1 i18n="@@introductionHeader">Hello i18n!</h1>
 </header>
 <div class="container">
-  <p>
-    This is the start page! <br/> where the <i>dynamic translations</i> <b>not work</b> as far as i know.
-  </p>
+    <p>
+        This is the start page! <br/> where the <i>dynamic translations</i>&nbsp;<b>not work</b> as far as i know.
+    </p>
+    <ng-template *ngFor="let number of [0,1,2,3,4]">
+        {{ number }}
+    </ng-template>
 </div>
 <footer>
-  <p>this a footer block:</p>
-  <p>Language selected: {{ localeId }}</p>
+    <p>this a footer block:</p>
+    <p>Language selected: {{ localeId }}</p>
 </footer>
 
