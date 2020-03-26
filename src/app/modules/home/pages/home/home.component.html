@@ -5,9 +5,9 @@
     <p>
         This is the start page! <br/> where the <i>dynamic translations</i>&nbsp;<b>not work</b> as far as i know.
     </p>
-    <ng-template *ngFor="let number of [0,1,2,3,4]">
-        {{ number }}
-    </ng-template>
+    <ng-container *ngFor="let number of [0,1,2,3,4]">
+        <app-registration></app-registration>
+    </ng-container>
 </div>
 <footer>
     <p>this a footer block:</p>
