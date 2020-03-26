@@ -6,11 +6,15 @@
         This is the start page! <br/> where the <i>dynamic translations</i>&nbsp;<b>not work</b> as far as i know.
     </p>
     <ng-container *ngFor="let number of [0,1,2,3,4]">
-        <app-registration></app-registration>
+        <app-registration [foo]="number" (output)="incrementCounter($event)"></app-registration>
     </ng-container>
+
+    <div *ngIf="(asyncGet$ | async) as posts" class="flex-container">
+        <app-post-card [post]="post" *ngFor="let post of posts"></app-post-card>
+    </div>
 </div>
 <footer>
-    <p>this a footer block:</p>
+    <p>this is how many times i clicked: {{ counter }}</p>
     <p>Language selected: {{ localeId }}</p>
 </footer>
 

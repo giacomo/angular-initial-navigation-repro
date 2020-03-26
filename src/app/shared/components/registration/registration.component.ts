@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
     selector: 'app-registration',
@@ -6,11 +6,16 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent implements OnInit {
-    foo = 1;
+    @Input() foo = 1;
+    @Output() output = new EventEmitter<any>();
 
     constructor() {
     }
 
     ngOnInit(): void {
+    }
+
+    doClick() {
+        this.output.emit('deine mutter');
     }
 }

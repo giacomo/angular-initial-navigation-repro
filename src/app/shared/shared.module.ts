@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RegistrationComponent } from './compoments/registration/registration.component';
+import { RegistrationComponent } from './components/registration/registration.component';
 import { FormsModule } from '@angular/forms';
+import { PostCardComponent } from './components/post-card/post-card.component';
 
 @NgModule({
-    declarations: [RegistrationComponent],
+    declarations: [RegistrationComponent, PostCardComponent],
     exports: [
-        RegistrationComponent
+        RegistrationComponent,
+        PostCardComponent
     ],
     imports: [
         CommonModule,
